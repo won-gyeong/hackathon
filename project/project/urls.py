@@ -23,4 +23,5 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('survey/', views.survey, name="survey"),
     path('survey/result/<str:clas>/', views.result, name="result"),
+    path('match/<str:clas>/', views.match, name="match"),
 ]

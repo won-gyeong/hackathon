@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  {% load static %}
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey Result</title>
+    <link rel="stylesheet" href="/static/result.css" />
   </head>
   <body>
-    <h1>Survey Result</h1>
     <div id="clas" style="display: none">{{clas}}</div>
     <div id="resultSection"></div>
+    <div class="contentSection"></div>
+    <a href="{% url 'match' clas %}" class="cta-button">YES</a>
+    <a href="{% url 'home' %}" class="cta-button">HOME</a>
 
-    <script src="../../../static/js/result.js"></script>
+    <script src="{% static 'js/result.js' %}"></script>
   </body>
 </html>

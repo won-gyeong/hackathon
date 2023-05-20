@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% load static %}
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey Home</title>
-    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="/static/home.css" />
   </head>
   <body>
     <header>
-      <h1>Survey Home</h1>
+      <h1>🐯대동제를 즐기는 나의 유형은?🐯</h1>
     </header>
-
+      </br></br></br></br></br>
     <main>
-      <a href="{% url 'survey' %}" class="cta-button">Start Survey</a>
+      <div>" 비슷한 유형의 사람들과 대동제를 함께 즐겨보세요 "</div>
+    </br></br></br></br></br></br>
+    <a href="{% url 'survey' %}" class="cta-button">테스트 시작하기</a>
     </main>
+  </br></br></br></br>
+  <div> (주)밀당남녀 </div>
   </body>
+ 
 </html>

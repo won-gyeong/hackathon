@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey</title>
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Survey</h1>
+    </header>
+
+    <main>
+      <div id="linkSection">
+        <h2 id="linkTitle">{{clas}}</h2>
+        <p id="linkText"></p>
+      </div>
+    </main>
+
+    <script src="{% static 'js/match.js' %}"></script>
+  </body>
+</html>

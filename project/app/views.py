@@ -10,3 +10,6 @@ def survey(request):
 
 def result(request, clas):
     return render(request, 'result.html', {'clas': clas})
+
+def match(request, clas):
+    return render(request, 'match.html', {'clas': clas})
