@@ -7,3 +7,6 @@ def home(request):
 
 def survey(request):
     return render(request, 'survey.html')
+
+def result(request, clas):
+    return render(request, 'result.html', {'clas': clas})
