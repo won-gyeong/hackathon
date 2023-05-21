@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Home</title>
+    <link rel="stylesheet" href="../static/home.css" />
+  </head>
+  <body>
+    <header>
+        <h1>🐯KUTI🐯</h1>
+        <p>❓❔대동제를 즐기는 나의 유형은❔❓</p>
+    </header>
+
+    <main>
+    </br></br>
+      <div class="ment">"비슷한 유형의 사람들과 대동제를 함께 즐겨보세요 !"</div>
+      </br></br></br></br>
+      <div id="formContainer">
+        <input
+          class="name-input"
+          type="text"
+          name="name"
+          placeholder="닉네임을 입력하세요"
+        />
+        <button class="name-button" onclick="setName()">Send </button>
+      </div>
+    </br></br>
+
+      <div id="nameDisplay"></div>
+      <a href="{% url 'survey' %}" class="cta-button">테스트 시작하기!</br>
+        <div class="totalParticipants">
+          현재 총 {{ total_participants }}명이 참가했어요.
+        </div>
+      </a>
+    </main>
+    
+
+    <script>
+      const formContainer = document.getElementById("formContainer");
+      const nameDisplay = document.getElementById("nameDisplay");
+      const nameInput = document.querySelector('input[name="name"]');
+      const nameButton = document.querySelector(".name-button");
+
+      function setName() {
+        const name = nameInput.value;
+
+        window.localStorage.setItem("name", name);
+        nameInput.value = "";
+        checkName();
+      }
+
+      function checkName() {
+        const name = window.localStorage.getItem("name");
+        if (name) {
+          formContainer.style.display = "none";
+          nameDisplay.innerHTML = name + "님 안녕하세요🥳";
+        } else {
+          nameDisplay.style.display = "none";
+          nameDisplay.innerHTML = "";
+        }
+      }
+
+      const name = () => {
+        fetch("", {
+          method: "POST",
+          body: JSON.stringify({
+            name: nameInput.value,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            const total_participants = data["total_participants"];
+
+            const totalParticipants =
+              document.querySelector(".totalParticipants");
+
+            nameInput.value = "";
+          });
+      };
+
+      nameButton.addEventListener("click", name);
+    </script>
+  </body>
+</html>

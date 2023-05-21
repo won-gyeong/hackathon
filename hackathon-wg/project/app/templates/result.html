@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Result</title>
+    <link rel="stylesheet" href="/static/result.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🐯KUTI🐯</h1>
+      <p>❓❔대동제를 즐기는 나의 유형은❔❓</p>
+      <div id="resultSection"></div>
+  </header>
+</br>
+    <div id="clas" style="display: none">{{clas}}</div>
+    <div class="container">
+      {% if clas == "SPEL" %}
+      <div class="result-id">불타는 로맨틱 헌터</div>
+      <img src="{% static './img/SPEL.jpg' %}" class="result-img" />
+      
+      {% endif %} {% if clas == "SPEF" %}
+      <div class="result-id">어디로 튈지 모르는 에너자이저</div>
+      <img src="{% static './img/SPEF.jpg' %}" class="result-img" />
+      
+      {% endif %} {% if clas == "SPUL" %}
+      <div class="result-id">굳세어라 퍼포머</div>
+      <img src="{% static './img/SPUL.jpg' %}" class="result-img" />
+      
+      {% endif %} {% if clas == "SPUF" %}
+      <div class="result-id">고대는 의리지! 의리왕</div>
+      <img src="{% static './img/SPUF.jpg' %}" class="result-img" />
+      
+      {% endif %} {% if clas == "SCEL" %}
+      <div class="result-id">두근두근 금사빠</div>
+      <img src="{% static './img/SCEL.jpg' %}" class="result-img" />
+      
+      {% endif %} {% if clas == "SCEF" %}
+      <div class="result-id">귀여운 변덕쟁이 </div>
+      <img src="{% static './img/SCEF.jpg' %}" class="result-img" />
+      
+      {% endif %} {% if clas == "SCUL" %}
+      <div class="result-id">낭만파 사랑꾼</div>
+      <img src="{% static './img/SCUL.jpg' %}" class="result-img" />
+      
+      {% endif %} {% if clas == "SCUF" %}
+      <div class="result-id">다정다감 수호자</div>
+      <img src="{% static './img/SCUF.jpg' %}" class="result-img" />
+      
+      {% endif %} {% if clas == "APEL" %}
+      <div class="result-id">러브홀릭 알코홀릭</div>
+      <img src="{% static './img/APEL.jpg' %}" class="result-img" />
+      
+      {% endif %} {% if clas == "APEF" %}
+      <div class="result-id">자유로운 주정뱅이</div>
+      <img src="{% static './img/APEF.jpg' %}" class="result-img" />
+      
+      {% endif %} {% if clas == "APUL" %}
+      <div class="result-id">알코홀릭 퍼포머</div>
+      <img src="{% static './img/APUL.jpg' %}" class="result-img" />
+      
+      {% endif %} {% if clas == "APUF" %}
+      <div class="result-id">의리 쩌는 주정뱅이/div>
+      <img src="{% static './img/APUF.jpg' %}" class="result-img" />
+
+      {% endif %} {% if clas == "ACEL" %}
+      <div class="result-id">힐끔힐끔 로맨틱 헌터</div>
+      <img src="{% static './img/ACEL.jpg' %}" class="result-img" />
+      
+      {% endif %} {% if clas == "ACEF" %}
+      <div class="result-id">잔잔바리 술꾼</div>
+      <img src="{% static './img/ACEF.jpg' %}" class="result-img" />
+      
+      {% endif %} {% if clas == "ACUL" %}
+      <div class="result-id">사색에 빠진 사랑꾼</div>
+      <img src="{% static './img/ACUL.jpg' %}" class="result-img" />
+      
+      {% endif %} {% if clas == "ACUF" %}
+      <div class="result-id">볼수록 진국 은둔고수</div>
+      <img src="{% static './img/ACUF.jpg' %}" class="result-img" />
+      
+      {% endif %}
+    </div>
+    <div class="contentSection"></div>
+    <div class="match">
+      <p class="lastment">
+      </br>
+        같은 KUTI를 가지고 있는 사람들과 함께 기깔나게 대동제도 즐기고
+        @next_koreauniv가 주는 야무진 상품도 받아가고 싶다면?👻
+      </br></br>
+      </p>
+    </div>
+    <a href="{% url 'match' clas %}" class="cta-button"> ticket to Wonderland</a>
+    <a href="{% url 'home' %}" class="cta-button">HOME</a>
+  </br></br></br></br>
+
+    <script src="{% static 'js/result.js' %}"></script>
+  </body>
+</html>

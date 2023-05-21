@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey</title>
+    <link rel="stylesheet" href="{% static 'match.css' %}" />
+  </head>
+  <body>
+    <header>
+      <h1>이상한 나라로 달려가는 중 ...</h1>
+    </header>
+
+    <main>
+      <img src="{% static '/img/SPEL.jpg' %}" alt="SPEL" id="match-img" />
+      <div id="linkSection">
+        <h2>가자</h2>
+        <h2 id="linkTitle">{{clas}}</h2>
+        <h2>의 소통창구로!</h2>
+        <p id="linkText"></p>
+      </div>
+    </main>
+
+    <script src="{% static 'js/match.js' %}"></script>
+  </body>
+</html>

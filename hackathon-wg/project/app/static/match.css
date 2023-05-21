@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "TTTtangsbudaejjigaeB";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2")
+      format("woff2");
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: "TTTtangsbudaejjigaeB";
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  header {
+    background-color: #e3aaaa;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #841010;
+    margin-top: 25px;
+    margin-bottom: 4px;
+    font-size: 32px; /* Increase font size */
+  }
+  
+  main {
+    margin: 20px;
+  }
+  
+  h2 {
+    color: #555;
+    font-size: 27px; /* Increase font size */
+    margin: 10px 0;
+  }
+  
+  p {
+    color: #555;
+    font-size: 24px; /* Increase font size */
+    line-height: 1.5;
+  }
+  
+  #linkSection {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #match-img {
+    width: 27%; /* Adjust the width as desired */
+    height: auto;
+    margin-bottom: 20px;
+    display: block; /* Center-align the image */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #linkTitle {
+    color: #841010;
+    font-size: 90px; /* Increase font size */
+    margin-bottom: 10px;
+  }
+  
+  #linkText {
+    font-size: 32px; /* Increase font size */
+  }
+  
+  .cta-button {
+    background-color: #fd7070;
+    border: thin solid;
+    border-color: #841010;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px; /* Increase font size */
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
